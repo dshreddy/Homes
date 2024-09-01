@@ -7,9 +7,6 @@ import { HousingLocation } from '../housinglocation';
   standalone: true,
   imports: [RouterModule],
   template: `
-  <a [routerLink]="['/details', housingLocation.id]">
-    Learn More
-  </a>
   <section class="listing">
       <img
         class="listing-photo"
@@ -19,6 +16,7 @@ import { HousingLocation } from '../housinglocation';
       />
       <h2 class="listing-heading">{{ housingLocation.name }}</h2>
       <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
+      <a [routerLink]="['/details', housingLocation.id]"> Learn More </a>
     </section>
   `,
   styleUrls: [`./housing-location.component.css`]
